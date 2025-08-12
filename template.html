@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>High speed access</th>
+      <th>Other very high speed access</th>
+      <th>Fiber FTTH access</th>
+      <th>Total access</th>
+      <th>Observation</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each item}}
+      <tr>
+        <td>{{year}}</td>
+        <td class="{{color_high_speed}}">{{high_speed}} M</td>
+        <td class="{{color_very_high_speed}}">{{very_high_speed}} M</td>
+        <td class="{{color_fibre_ftth}}">{{fibre_ftth}} M</td>
+        <td>{{total}} M</td>
+        <td>{{comment}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
