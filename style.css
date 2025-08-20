@@ -5,24 +5,56 @@
   font-family:'Montserrat-M', 'Optima','Futura','Inter', sans-serif;
 }
 
-.container {
-    max-width: 10000px ; /* responsive */
-    margin-inline: auto; /* responsive */
-}
+
+/* Header */
 
 header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color:  rgb(112, 78, 238);;
+    background-color:  rgb(112, 78, 238);
     min-height: 100px; /* responsive */
     padding: 0 20px;
 }
 
 
+/* Hamburger menu */
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+    border-style: none;
+    background-color: white;
+    padding: 15px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    background-color: rgb(112, 78, 238);
+}
+
+
+/* Navbar and main configuration */
+
+
+.nav-and-main {
+    display: flex; 
+}
+
+
+/* Left Navbar */
+
+
 .nav-menu {
+    flex: 0 0 260px; /* ne grandit pas, ne rétrécit pas, base = 260px */
     background-color: rgb(239, 236, 252);
-    min-width: 220px;
 }
 
 .nav-menu li {
@@ -46,27 +78,40 @@ header {
     border-bottom: 1px solid rgba(112, 78, 238, 0.2);
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-    margin-right: 20px;
-    border-style: none;
-    background-color: white;
-    padding: 15px;
+
+/* Banner */
+
+
+main {
+    flex: 1 1 auto; /* fix fiber banner */
+}
+
+.banner {
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+     
+}
+
+.banner-adsl {
+    background-image: url("Images/Page2PhotoPrincipale.jpg"); 
+}
+.banner-fiber {
+    background-image: url("Images/Page3PhotoPrincipale.jpg");
+}
+.banner-home {
+    background-image: url("Images/Page1PhotoPrincipale.jpg");
 }
 
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition:all 0.3s ease-in-out;
-    transition:all 0.3s ease-in-out;
-    background-color: rgb(112, 78, 238);
-}
+/* Summary */
 
-.Summary {
+
+.summary {
     color: rgb(112, 78, 238);
     background-color: rgb(239, 236, 252);
     max-width: 800px;
@@ -74,7 +119,7 @@ header {
     padding: 20px;
 }
 
-.Summary a {
+.summary a {
     display: block;
     padding: 20px 0;
     color: rgb(112, 78, 238);
@@ -86,195 +131,170 @@ header {
 }
 
 
-main {
-    width: 100%;
-    background-color: white;
-    color: #4d4d4d;
-    
-}
+/* Main content without banner */
+
 
 .Content {
     padding-left: 100px;
-    padding-right: 40px;
-}
-
-.banner {
-    background-size: cover;
-    background-position: center;
-    min-height: 500px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner-adsl {
-    background-image: url("Images/Page2PhotoPrincipale.jpg");
-    min-width: 400px; /* responsive */
-}
-
-.banner-fiber {
-    background-image: url("Images/Page3PhotoPrincipale.jpg");
-    min-width: 400px; /* responsive */
-}
-
-
-.banner-home {
-    background-image: url("Images/Page1PhotoPrincipale.jpg");
-    min-width: 400px; /* responsive */
-}
-
-.nav-and-main {
-    display: flex;
-    flex: 1;  
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Montserrat-B' ; 
-}
-
-h1 {
-    font-size: 20px;
-    color: rgb(239, 236, 252);;
-    margin: 0 50px;
-}
-
-h2 {
-    font-size: 65px;
-    font-weight: bold;
-    color: white;
-    margin:0px 100px; /* specialement pour le long titre du homepage*/
-    font-family: 'Rosiana' ;
-
-
-}
-
-h3 {
-    font-size: 23px;
-    color: #011e2a;
-    margin-bottom: 35px;
-    margin-top: 65px; 
-}
-
-h4 {
-    font-size: 20px;
-    color: rgb(112, 78, 238);
-    margin: 0 20px;
-    margin-bottom: 10px;
+    padding-right: 50px;
+    max-width: 900px;
+    width: 100%;
+    background-color: white;
+    color: #4d4d4d;
 }
 
 p, ul {
     margin-bottom: 30px;
-    max-width: 800px;
     font-size: 18px;
     line-height: 1.8
 }
 
+/* Images */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; 
+}
+
+.img-medium {
+    width: 100%;
+    min-width: 300px;
+}
+
+.img-large {
+    width:100%
+}
+
+.img-logo {
+    max-width: 150px;
+}
+
+/* List from the content */
+.Content li {
+    margin-left: 40px; /* fixing bullet points being to left */
+}
+
+/* Text with image on the right */
 .text-with-image {
     display: flex;
     margin-bottom: 30px;
 }
 /* for text + image on same line we need the same margin so we reset the margin for the text because otherwise it is double margin*/
 .text-with-image p {
-    margin-bottom: 0px;
-    max-width: 500px; 
-    
+    margin-bottom: 0px;    
 }
+
 .text-with-image img {
     margin-left: 20px;   
 }
 
-.text-with-image li {
-    max-width: 500px;
-}
-
-.Content li {
-    margin-left: 40px; /* list points being to right */
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
+/* Table */
 table {
+    border-collapse: collapse;
     width: 100%;
-    font-family: sans-serif;
-    background-color: #fff; 
-    margin-bottom: 50px;
-    border: 2px solid black
+    text-align: center; 
+    border: 2px solid black;
 }
 
-thead {
-  background-color: #2c3e50;
-  color: #ecf0f1;
+th, td {
+    border: 1px solid #ccc;
+    padding: 20px;
 }
 
-thead th {
-  padding: 25px;
-  font-weight: 600;
+th {
+    background-color: #2c3e50;
+    color: #ecf0f1;
 }
 
-tbody td {
-  padding: 20px;
-  color: black;
+td {
+    background-color: white;
+    color: black;
 }
 
-/* Couleurs par cellule */
+/* Table color from fiber page  */
 .green {
-  background-color: #71b080; /* vert clair */
+  background-color: #71b080; 
 }
 
 .yellow {
-  background-color: #fcdf83; /* jaune clair */
+  background-color: #fcdf83; 
 }
 
 .red {
   background-color: #ee6370;
 }
 
-/* API table */
+
+/* Footer */
 
 
+footer {
+    display: flex;               
+    align-items: center;         
+    justify-content: center;
+    background-color: rgb(112, 78, 238);
+    color: white;
+    font-size: 14px;
+    min-height: 200px;
+         
+}
+
+footer p {
+    margin: 0; 
+}
+
+
+/* Titles */
+
+
+.site-title, h1, .summary-title, .section-title {
+    font-family: 'Montserrat-B' ; 
+}
+
+.site-title {
+    font-size: 20px;
+    color: rgb(239, 236, 252);;
+    margin: 0 50px;
+}
+
+h1 {
+    font-size: 65px;
+    font-weight: bold;
+    color: white;
+    margin:0px 100px; /* specialement pour le long titre du homepage*/
+    font-family: 'Rosiana' ;
+}
+
+.summary-title {
+    font-size: 20px;
+    color: rgb(112, 78, 238);
+    margin: 0 20px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 23px;
+    color: #011e2a;
+    margin-bottom: 35px;
+    margin-top: 65px; 
+}
+
+
+
+/* Responsive design (small screen) */
 
 
 @media(max-width:768px){
-    /* 1. Empiler les éléments  et fais disparaitre naturellement le navbar de gauche*/
-    .nav-and-main {
-        flex-direction: column;
-    }
-    .text-with-image {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .text-with-image img {
-        margin-left: 0px;
-        margin-top: 10px; 
-        max-width: 350px;
-        height: auto;   
-    }
+    /* Header */
 
-    .text-with-image p, .text-with-image li {
-        max-width: 100%;  
-    }
-
-    .Content {
-        padding: 0 40px;
-        display: flex;
-        flex-direction: column ;
-    }
-
+    /* Hamburger menu and Nav menu */
     .hamburger{
         display: block;
         margin-left: auto;   /* le pousse à droite */
         margin-right: 20px;  /* espace avec le bord */
-
     }
-
     /*Transform the hamburger menu into a cross */ 
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
@@ -285,8 +305,10 @@ tbody td {
     .hamburger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
-
-
+    /* 1. Empiler les éléments  et fais disparaitre naturellement le navbar de gauche*/
+    .nav-and-main {
+        flex-direction: column;
+    }
     .nav-menu{
         position:fixed;
         left: -100%;
@@ -295,29 +317,41 @@ tbody td {
         text-align: center;
         transition: 0.3s;
     }
-
     .nav-menu a {
         justify-content: center;
     }
-
-
     .nav-menu.active{
         left: 0;
     }
-
     .nav-menu[hidden] { display: none; }
+
+
+    /* Main content without banner */
+
+
+    .Content {
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column ;
+    }
+    /* Text with image */
+    .text-with-image {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-with-image img {
+        margin-left: 0px;
+        margin-top: 10px; 
+        max-width: 350px;
+        height: auto;   
+    }
+    .text-with-image p, .text-with-image li {
+        max-width: 100%;  
+    }
 }
 
-table {
-  border-collapse: collapse;
-  margin-top: 30px;
-}
 
-th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
+/* Special rectification for adsl cable image */
 
 @media(max-width:1300px){
     
@@ -327,30 +361,12 @@ th, td {
 }
 
 
+/* font-family */
+
+
 @font-face {
   font-family: 'GC Kualine';
   src: url('./fonts/GC-Kualine-Demo-BF688b24f63a0c2.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura';
-  src: url('./fonts/Futura.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Optima';
-  src: url('./fonts/Optima.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('./fonts/Montserrat-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -365,13 +381,6 @@ th, td {
 @font-face {
   font-family: 'Montserrat-B';
   src: url('./fonts/Montserrat-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Veriona';
-  src: url('./fonts/Veriona.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

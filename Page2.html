@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>The Age of ADSL Broadband (2000-2010)</title>
 </head>
 <body>
     <header>
-        <img src="Images/PageLogo.png" alt="Logo Net Evolution"  width="130px" height="50px">
-        <h1>The internet evolution in France</h1>
+        <img src="Images/PageLogo_lavender.png" alt="Logo Net Evolution" class="img-logo">
+        <p class="site-title">The internet evolution in France</p>
         <button id="hamburgerMenu" class= "hamburger" aria-label="Navigation menu" aria-expanded="false" aria-controls="primaryNav">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -26,25 +26,26 @@
         </nav>
 
         <main>
-            <section class = "banner banner-adsl" >
-                <h2>The Age of ADSL Broadband (2000-2010)</h2>
+            <section class = "banner banner-adsl">
+                <h1>The Age of ADSL Broadband (2000-2010)</h1>
             </section>
             <div class = "Content">
-                <section class = "Summary">
-                    <h4>Summary</h4>
+                <nav aria-labelledby = "summary-title" class = "summary">
+                    <h2 id = "summary-title" class="summary-title">Summary</h2>
                     <ol>
                         <li><a href="#part1">Launch of ADSL and consumer offering (1999)</a></li>
                         <li><a href="#part2">Free and the Triple Play revolution (2002)</a></li>
-                        <li><a href="#part3">The decline of ADSL</a></li>
+                        <li><a href="#part3">ADSL subscriptions market share evolution</a></li>
+                        <li><a href="#part4">The decline of ADSL</a></li>
                     </ol>
-                </section>
-                <section class = "Block1">
-                    <h3 id="part1">Launch of ADSL and consumer offering (1999)</h3>
+                </nav>
+                <section>
+                    <h2 id="part1" class="section-title">Launch of ADSL and consumer offering (1999)</h2>
                     <div class = "text-with-image"> 
                         <p>En 1999 arrive la première offre haut débit ADSL proposée par France Telecom. C’est le debut d’une nouvelle ère pour internet en France.  Elle permet d’atteindre un débit de 512 Kb/s. Une vitesse jamais vue qui permet d’afficher confortablement les pages web. Un bond en avant par rapport aux anciens modems RTC, limités à 56 kb/s.
             L’ADSL utilise les mêmes lignes téléphoniques en cuivre que le RTC, mais sépare les fréquences pour permettre à la fois l’accès à Internet et l’utilisation du téléphone.
                         </p>
-                        <img src="Images/Page2Photo1.jpg" alt="France Telecom modem Netissimo" width="300px">
+                        <img src="Images/Page2Photo1.jpg" alt="France Telecom modem Netissimo" class="img-medium">
                     </div>
                     <p>
                         Dans un second temps, une autre étape cruciale accélère le mouvement : la fin du monopole de France Télécom sur les lignes téléphoniques. Ce changement ouvre la voie au dégroupage, une mesure qui permet aux fournisseurs d’accès à Internet (FAI) d’utiliser les lignes de France Télécom sans payer de frais supplémentaires à l’opérateur historique.
@@ -57,16 +58,16 @@
                         En 2006 Plus de 10 millions d’abonnés. Les accès ADSL comptent désormais pour 94% des accès haut débit en France. Orange, Neuf et Free étaient les principaux FAI avec près de 82% de part de marché.
                     </p>
                     <div class ="Graph">
-                        <img src="Images/Page2Photo2.jpg" alt="Broadband evolution graph" width="800px">
+                        <img src="Images/Page2Photo2.jpg" alt="Broadband evolution graph" class="img-large">
                     </div>
                 </section>
                 <section>
-                    <h3 id="part2">Free and the Triple Play revolution (2002)</h3>
+                    <h2 id="part2" class="section-title">Free and the Triple Play revolution (2002)</h2>
                     <div class = "text-with-image"> 
                         <p>
                             En 2002 Free lance la premiere box Triple Play avec une offre inedite regroupant l’accès à 3 services, internet, téléphone et télévision pour seulement 30 euros par mois. À l’époque aucune offre aucune autre offre comparable n’existe sur le marché.
                         </p>
-                        <img src="Images/Page2Photo3.jpg" alt="Triple Play Freebox" width="200px">
+                        <img src="Images/Page2Photo3.jpg" alt="Triple Play Freebox" class="img-medium">
                     </div>
                     <p>
                         Suite à cette annonce Stéphane Treppoz, le PDG d’AOL France gémit “C’est pas possible… quel cauchemar ce truc”.
@@ -78,7 +79,7 @@
                     </p>
                 </section>
                 <section>
-                    <h3 id="part1.2">ADSL subscriptions market share evolution</h3>
+                    <h2 id="part3" class="section-title">ADSL subscriptions market share evolution</h2>
                     <table id="market-share">
                         <thead>
                             <tr>
@@ -91,7 +92,7 @@
                     </table>
                 </section>
                 <section>
-                    <h3 id="part3">The decline of ADSL</h3>
+                    <h2 id="part4" class="section-title">The decline of ADSL</h2>
                     <p>
                         l'ADSL a commencé à décliner ver la fin 2014 face à la concurrence de la fibre optique.  Plusieurs limites techniques expliquent cela : 
                     </p>
@@ -102,7 +103,7 @@
                             <li>La qualité de la connexion ADSL dépend de la distance entre le domicile de l’utilisateur et le répartiteur téléphonique. Plus la distance est grande, plus le débit diminue.</li>
                             <li>Enfin un phénomène inattendu s’est ajouté : les vols de câbles en cuivre, revendus illégalement, provoquant des interruptions brutales de service.</li>
                         </ul>
-                        <img src="Images/Page2Photo4.jpg" alt="Copper cable" width="350px">
+                        <img src="Images/Page2Photo4.jpg" alt="Copper cable" class="img-medium">
                     </div>
                     <p>
                         Toutes ces contraintes ont conduit à une décision majeur à partir du 31 janvier 2026 il ne sera plus possible de souscrire à une box ADSL. Et le réseau sera entièrement coupé en 2030.
