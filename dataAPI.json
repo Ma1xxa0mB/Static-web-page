@@ -1,0 +1,74 @@
+{
+  "periods": [
+    {
+      "year": 2004,
+      "unit": "percent",
+      "total_of_subscribers": 6.0,
+      "subscribers_unit": "Millions",
+      "market_share": [
+        { "provider": "Orange", "value": 49.1 },
+        { "provider": "Free", "value": 17.4 },
+        { "provider": "Neuf Cegetel + AOL", "value": 11.2 },
+        { "provider": "AOL", "value": 7.5 },
+        { "provider": "Telecom Italia", "value": 5.6 },
+        { "provider": "Tele2", "value": 4.8 },
+        { "provider": "Club Internet", "value": 3.3 },
+        { "provider": "Others", "value": 1.1 }
+      ]
+    },
+    {
+      "year": 2006,
+      "unit": "percent",
+      "total_of_subscribers": 12.0,
+      "subscribers_unit": "Millions",
+      "market_share": [
+        { "provider": "Orange", "value": 49.4 },
+        { "provider": "Free", "value": 19.0 },
+        { "provider": "Neuf Cegetel (incl. AOL)", "value": 18.1 },
+        { "provider": "Telecom Italia", "value": 6.4 },
+        { "provider": "Club Internet", "value": 5.2 },
+        { "provider": "Others", "value": 1.9 }
+      ]
+    },
+    {
+      "year": 2008,
+      "unit": "percent",
+      "total_of_subscribers": 15.5,
+      "subscribers_unit": "Millions",
+      "market_share": [
+        { "provider": "Orange", "value": 49.6 },
+        { "provider": "Free/Alice", "value": 25.2 },
+        { "provider": "SFR", "value": 23.1 },
+        { "provider": "Others", "value": 1.9 }
+      ]
+    },
+    {
+      "year": 2009,
+      "unit": "percent",
+      "total_of_subscribers": 19.0,
+      "subscribers_unit": "Millions",
+      "market_share": [
+        { "provider": "Orange", "value": 46.6 },
+        { "provider": "Free/Alice", "value": 23.4 },
+        { "provider": "SFR", "value": 22.9 },
+        { "provider": "Numericable", "value": 4.3 },
+        { "provider": "Bouygues", "value": 1.5 },
+        { "provider": "Darty", "value": 1.2 }
+      ]
+    },
+    {
+      "year": 2010,
+      "unit": "percent",
+      "total_of_subscribers": 20.8,
+      "subscribers_unit": "Millions",
+      "market_share": [
+        { "provider": "Orange", "value": 46.0 },
+        { "provider": "SFR", "value": 25.0 },
+        { "provider": "Free", "value": 23.0 },
+        { "provider": "Bouygues", "value": 3.0 },
+        { "provider": "Darty", "value": 2.0 },
+        { "provider": "Others", "value": 1.0 }
+      ]
+    }
+  ]
+}

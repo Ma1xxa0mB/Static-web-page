@@ -8,17 +8,17 @@
 </head>
 <body>
     <header>
-        <img src="Images/PageLogo.png" alt="Logo Net Evolution" width="130px" height="50px">
+        <img src="Images/PageLogo_lavender.png" alt="Logo Net Evolution" width="130px" height="50px">
         <h1>The internet evolution in France</h1>
-    <div class= "hamburger">
+        <button id="hamburgerMenu" class= "hamburger" aria-label="Navigation menu" aria-expanded="false" aria-controls="primaryNav">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </div>
+        </button>
     </header>
     <div class ="nav-and-main">
-        <nav>
-            <ul class = "nav-menu">
+        <nav aria-label="main navigation" id="primaryNav" class = "nav-menu">
+            <ul>
                 <li class = "nav-item"><a href="index.html" class = "nav-link">Homepage</a></li>
                 <li class = "nav-item"><a href="Page2.html" class = "nav-link">The Age of ADSL Broadband (2000-2010)</a></li>
                 <li class = "nav-item"><a href="Page3.html" class = "nav-link">The Arrival of Fiber (2010-2025)</a></li> 
@@ -30,8 +30,17 @@
                 <h2>The Arrival of Fiber (2010-2025)</h2>
             </section>
             <div class = "Content">
+                <nav aria-labelledby = "Summary-title" class = "Summary">
+                    <h4 id="Summary-title">Summary</h4>
+                    <ol>
+                        <li><a href="#part1">The Arrival of Fiber(2007-2009)</a></li>
+                        <li><a href="#part2">Launch of the France Très Haut Débit (France Very High Speed) Plan (2013)</a></li>
+                        <li><a href="#part3">Progress report in 2025</a></li>
+                        <li><a href="#part4">Evolution of Broadband Subscriptions (2005–2024)</a></li>
+                    </ol>
+                </nav>
                 <section>
-                    <h3>The Arrival of Fiber (2007-2009)</h3>
+                    <h3 id="part1">The Arrival of Fiber (2007-2009)</h3>
                     <div class = "text-with-image"> 
                         <p>Dès 2007, la France commence à équiper son réseau de la fibre optique.
             Contrairement à l?ADSL qui utilise des lignes en cuivre, la fibre optique utilise des câbles en verre ou en plastique pour transmettre des données sous forme de lumière, ce qui permet :  
@@ -48,7 +57,7 @@
                     </p>
                 </section>
                 <section>
-                    <h3>Launch of the France Très Haut Débit (France Very High Speed) Plan (2013)</h3>
+                    <h3 id="part2">Launch of the France Très Haut Débit (France Very High Speed) Plan (2013)</h3>
                     <div class = "text-with-image"> 
                         <p>
                             En 2013, le Plan France Très haut débit est lancé. Il vise à construire un réseau en fibre optique jusqu’à l’abonné sur tout le territoire francais à la fin 2022.
@@ -65,7 +74,7 @@
                     </p>
                 </section>
                 <section>
-                    <h3>Progress report in 2025</h3>
+                    <h3 id="part3">Progress report in 2025</h3>
                     <p>
                         Qu’en est-il aujourd’hui ? Le plan se déroule-t-il comme prévu ?
                     </p> 
@@ -84,7 +93,7 @@
                     </div>
                 </section>
                 <section>
-                    <h3>Evolution of Broadband Subscriptions (2005–2024)</h3>
+                    <h3 id="part4">Evolution of Broadband Subscriptions (2005–2024)</h3>
                     <div id="content"></div>
                 </section>
             </div>
@@ -96,8 +105,6 @@
     </footer>
 
     <!-- Template Engine -->
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
-
     <script src="./script.js"></script>
 </body>
 </html>

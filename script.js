@@ -1,10 +1,35 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+/*const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");*/
 
-hamburger.addEventListener("click",()=>{
+const navButton = document.getElementById("hamburgerMenu");
+const navMenu = document.getElementById("primaryNav");
+
+function openNavigation() {
+  navButton.setAttribute("aria-expanded", "true");
+  navMenu.hidden = false;
+  navButton.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+
+function closeNavigation() {
+  navButton.setAttribute("aria-expanded", "false");
+  navMenu.hidden = true;
+  navButton.classList.remove("active");
+  navMenu.classList.remove("active");
+}
+
+navButton.addEventListener("click", () => {
+  const expanded = navButton.getAttribute("aria-expanded") === "true";
+  if (expanded) {
+    closeNavigation();
+  } else {
+    openNavigation();
+  }
+})
+/*hamburger.addEventListener("click",()=>{
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-})
+})*/
 
 class SimpleTemplateEngine {
   
@@ -70,34 +95,57 @@ class SimpleTemplateEngine {
   }
 }
 
-const tEngine = new SimpleTemplateEngine("template.html");
+//if(contentTag) to manage the error for page 2 which has not 
+const contentTag = document.getElementById("content");
+if (contentTag) {
+  const tEngine = new SimpleTemplateEngine("template.html");
 
-Promise.all([
-  tEngine.loadTemplate(),
-  fetch('data.json').then(res => res.json())
-])
-.then(([_, data])=>{
-  console.log("template + data loaded")
-  tEngine.renderTemplate("content",data); // injecte le template brut dans le DOM
-})
+  Promise.all([
+    tEngine.loadTemplate(),
+    fetch('data.json').then(res => res.json())
+  ])
+  .then(([_, data])=>{
+    console.log("template + data loaded")
+    tEngine.renderTemplate("content",data); // injecte le template brut dans le DOM
+  })
 
+}
+// //function for 2 columns inside table
+// function renderSharesTable(list) {
+//   const items = (list || [])
+//     .sort((a,b) => b.value - a.value)           // tri décroissant (optionnel)
+//     .map(s => `${s.provider}: ${s.value}%`);
 
+//   let rows = "";
+//   for (let i = 0; i < items.length; i += 2) {
+//     const left  = items[i]     || "";
+//     const right = items[i + 1] || "";
+//     rows += `<tr><td>${left}</td><td>${right}</td></tr>`;
+//   }
+//   return `<table class="shares-table"><tbody>${rows}</tbody></table>`;
+// }
 
+document.addEventListener("DOMContentLoaded", () => {
+  fetchPeriods();
+});
 
+function fetchPeriods() {
+  fetch("http://localhost:3000/api/periods")
+  .then(response => response.json())
+  .then(data => {
+    const tbody = document.querySelector("#market-share tbody");
+    tbody.innerHTML = data.map(period => {
+      const shares = (period.market_share || [])
+      .map(s => `${s.provider}: ${s.value}%`)
+      .join(", ");
+      return `
+      <tr> 
+        <td>${period.year}</td>
+        <td>${period.total_of_subscribers} ${period.subscribers_unit}</td>
+        <td>${shares}</td>
+      </tr>`;
+      }).join("");
+    })
+  .catch(error => console.error('Error fetching periods:', error));
+}
 
-// fetch('./data.json')
-//   .then(res => res.json())
-//   .then(data => {
-//     const source = document.getElementById('access-template').innerHTML;
-//     const template = Handlebars.compile(source);
-//     const html = template(data);
-//     document.getElementById('access-stats').innerHTML = html;
-//   });
-
-// Handlebars.registerHelper("getColor", function (value, total) {
-//   const ratio = value / total;
-//   if (ratio > 0.7) return "strong";
-//   if (ratio > 0.4) return "medium";
-//   if (ratio > 0.1) return "weak";
-//   return "minimal";
-// });

@@ -10,15 +10,15 @@
     <header>
         <img src="Images/PageLogo.png" alt="Logo Net Evolution"  width="130px" height="50px">
         <h1>The internet evolution in France</h1>
-    <div class= "hamburger">
+        <button id="hamburgerMenu" class= "hamburger" aria-label="Navigation menu" aria-expanded="false" aria-controls="primaryNav">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </div>
+        </button>
     </header>
     <div class ="nav-and-main">
-        <nav>
-            <ul class = "nav-menu">
+        <nav aria-label="main navigation" id="primaryNav" class = "nav-menu">
+            <ul>
                 <li class = "nav-item"><a href="index.html" class = "nav-link">Homepage</a></li>
                 <li class = "nav-item"><a href="Page2.html" class = "nav-link">The Age of ADSL Broadband (2000-2010)</a></li>
                 <li class = "nav-item"><a href="Page3.html" class = "nav-link">The Arrival of Fiber (2010-2025)</a></li> 
@@ -30,8 +30,16 @@
                 <h2>The Age of ADSL Broadband (2000-2010)</h2>
             </section>
             <div class = "Content">
+                <section class = "Summary">
+                    <h4>Summary</h4>
+                    <ol>
+                        <li><a href="#part1">Launch of ADSL and consumer offering (1999)</a></li>
+                        <li><a href="#part2">Free and the Triple Play revolution (2002)</a></li>
+                        <li><a href="#part3">The decline of ADSL</a></li>
+                    </ol>
+                </section>
                 <section class = "Block1">
-                    <h3>Launch of ADSL and consumer offering (1999)</h3>
+                    <h3 id="part1">Launch of ADSL and consumer offering (1999)</h3>
                     <div class = "text-with-image"> 
                         <p>En 1999 arrive la première offre haut débit ADSL proposée par France Telecom. C’est le debut d’une nouvelle ère pour internet en France.  Elle permet d’atteindre un débit de 512 Kb/s. Une vitesse jamais vue qui permet d’afficher confortablement les pages web. Un bond en avant par rapport aux anciens modems RTC, limités à 56 kb/s.
             L’ADSL utilise les mêmes lignes téléphoniques en cuivre que le RTC, mais sépare les fréquences pour permettre à la fois l’accès à Internet et l’utilisation du téléphone.
@@ -53,7 +61,7 @@
                     </div>
                 </section>
                 <section>
-                    <h3>Free and the Triple Play revolution (2002)</h3>
+                    <h3 id="part2">Free and the Triple Play revolution (2002)</h3>
                     <div class = "text-with-image"> 
                         <p>
                             En 2002 Free lance la premiere box Triple Play avec une offre inedite regroupant l’accès à 3 services, internet, téléphone et télévision pour seulement 30 euros par mois. À l’époque aucune offre aucune autre offre comparable n’existe sur le marché.
@@ -63,14 +71,27 @@
                     <p>
                         Suite à cette annonce Stéphane Treppoz, le PDG d’AOL France gémit “C’est pas possible… quel cauchemar ce truc”.
         Le groupe Americain AOL,  qui est alors l’un des principaux fournisseurs d’accès à internet (FAI) propose une offre similaire à 45 euros par mois soit 50% plus cher.
-        La plupart des FAI proposés des abonnements à 45 euros ou plus. 
+        La plupart des FAI proposés des abonnements à 45 euros ou plus. <a href="https://www.youtube.com/watch?v=CXsXngvWPeY" target="_blank" rel="noopener noreferrer"> Voir la reaction de Stéphane Treppoz suite à l'annonce de la box Triple Play</a>.
                     </p>
                     <p>
                         Le succès de Free est immediat en fin 2003, le nombre d’abonnés à l’offre ADSL de Free dépasse 500 000 utilisateurs. Le groupe est alors le numéro deux du secteur avec plus de 15% de parts de marché, loin devant AOL France.
                     </p>
                 </section>
                 <section>
-                    <h3>The decline of ADSL</h3>
+                    <h3 id="part1.2">ADSL subscriptions market share evolution</h3>
+                    <table id="market-share">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Total Subscribers</th>
+                                <th>ADSL market share</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3 id="part3">The decline of ADSL</h3>
                     <p>
                         l'ADSL a commencé à décliner ver la fin 2014 face à la concurrence de la fibre optique.  Plusieurs limites techniques expliquent cela : 
                     </p>

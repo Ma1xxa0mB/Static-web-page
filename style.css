@@ -14,43 +14,47 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: white;
+    background-color:  rgb(112, 78, 238);;
     min-height: 100px; /* responsive */
     padding: 0 20px;
 }
 
-nav {
+
+.nav-menu {
     background-color: rgb(239, 236, 252);
     min-width: 220px;
 }
 
-nav li {
+.nav-menu li {
     list-style: none;
-    padding-left: 20px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
-nav li:hover {
+.nav-menu li:hover {
     background-color: #cac2ff;
 }
 
-nav a {
-    /*color: #333;*/
-    color: rgb(112, 77, 242);
+.nav-menu a {
+    color: rgb(112, 78, 238);
+    display:flex;
+    align-items:center;
+    padding: 0px 10px 0px 30px;
+    min-height: 110px; 
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     font-family: 'GC Kualine', sans-serif;
+    border-bottom: 1px solid rgba(112, 78, 238, 0.2);
 }
 
 .hamburger {
     display: none;
     cursor: pointer;
     margin-right: 20px;
-
+    border-style: none;
+    background-color: white;
+    padding: 15px;
 }
+
 
 .bar {
     display: block;
@@ -59,8 +63,28 @@ nav a {
     margin: 5px auto;
     -webkit-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
-    background-color: rgb(112, 77, 242);
+    background-color: rgb(112, 78, 238);
 }
+
+.Summary {
+    color: rgb(112, 78, 238);
+    background-color: rgb(239, 236, 252);
+    max-width: 800px;
+    margin-top: 65px; 
+    padding: 20px;
+}
+
+.Summary a {
+    display: block;
+    padding: 20px 0;
+    color: rgb(112, 78, 238);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'GC Kualine', sans-serif;
+
+}
+
 
 main {
     width: 100%;
@@ -106,20 +130,24 @@ main {
     flex: 1;  
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Montserrat-B' ; 
 }
 
 h1 {
     font-size: 20px;
-    color: rgb(112, 77, 242);
+    color: rgb(239, 236, 252);;
     margin: 0 50px;
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 65px;
+    font-weight: bold;
     color: white;
     margin:0px 100px; /* specialement pour le long titre du homepage*/
+    font-family: 'Rosiana' ;
+
+
 }
 
 h3 {
@@ -127,6 +155,13 @@ h3 {
     color: #011e2a;
     margin-bottom: 35px;
     margin-top: 65px; 
+}
+
+h4 {
+    font-size: 20px;
+    color: rgb(112, 78, 238);
+    margin: 0 20px;
+    margin-bottom: 10px;
 }
 
 p, ul {
@@ -189,16 +224,20 @@ tbody td {
 
 /* Couleurs par cellule */
 .green {
-  background-color: #d4edda; /* vert clair */
+  background-color: #71b080; /* vert clair */
 }
 
 .yellow {
-  background-color: #fff3cd; /* jaune clair */
+  background-color: #fcdf83; /* jaune clair */
 }
 
 .red {
-  background-color: #f8d7da; /* rose clair */
+  background-color: #ee6370;
 }
+
+/* API table */
+
+
 
 
 @media(max-width:768px){
@@ -256,9 +295,16 @@ tbody td {
         transition: 0.3s;
     }
 
+    .nav-menu a {
+        justify-content: center;
+    }
+
+
     .nav-menu.active{
         left: 0;
     }
+
+    .nav-menu[hidden] { display: none; }
 }
 
 table {
@@ -318,6 +364,20 @@ th, td {
 @font-face {
   font-family: 'Montserrat-B';
   src: url('./fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Veriona';
+  src: url('./fonts/Veriona.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rosiana';
+  src: url('./fonts/Rosiana.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
