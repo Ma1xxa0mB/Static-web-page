@@ -334,6 +334,11 @@ h1 {
         display: flex;
         flex-direction: column ;
     }
+    table {
+    display: block;     /* devient scrollable */
+    overflow-x: auto;
+    white-space: nowrap; /* garde les colonnes côte à côte */
+    }
     /* Text with image */
     .text-with-image {
         flex-direction: column;
