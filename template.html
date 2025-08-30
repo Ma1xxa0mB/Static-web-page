@@ -1,24 +1,122 @@
-<table>
-  <thead>
-    <tr>
-      <th>Year</th>
-      <th>High speed access</th>
-      <th>Other very high speed access</th>
-      <th>Fiber FTTH access</th>
-      <th>Total access</th>
-      <th>Observation</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each item}}
-      <tr>
-        <td>{{year}}</td>
-        <td class="{{color_high_speed}}">{{high_speed}} M</td>
-        <td class="{{color_very_high_speed}}">{{very_high_speed}} M</td>
-        <td class="{{color_fibre_ftth}}">{{fibre_ftth}} M</td>
-        <td>{{total}} M</td>
-        <td>{{comment}}</td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+<header>
+  <img src="{{logo_img}}" alt="{{logo_alt}}" class="img-logo" />
+  <p class="site-title">{{site_title}}</p>
+  <button id="hamburgerMenu" class="hamburger" aria-label="Navigation menu" aria-expanded="false" aria-controls="primaryNav">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
+</header>
+
+<div class="nav-and-main">
+  <nav aria-label="main navigation" id="primaryNav" class="nav-menu">
+    <ul>
+      {{#each nav}}
+        <li class="nav-item"><a href="{{href}}" class="nav-link">{{page}}</a></li>
+      {{/each}}
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Bannière -->
+    <section class="banner {{banner_Class}}">
+      <h1>{{page3_title}}</h1>
+    </section>
+
+    <div class="Content">
+      <!-- Sommaire -->
+      <nav aria-labelledby="summary-title" class="summary">
+        <h2 id="summary-title" class="summary-title">Summary</h2>
+        <ol>
+          {{#each summary}}
+            <li><a href="#{{id}}">{{sub_title}}</a></li>
+          {{/each}}
+        </ol>
+      </nav>
+
+      <!-- PART 1 -->
+      <section>
+        <h2 id="part1" class="section-title">{{part1_title}}</h2>
+        <div class="text-with-image">
+          <p>{{part1_p1}}</p>
+          <img src="{{part1_img}}" alt="{{part1_img_alt}}" class="img-medium" />
+        </div>
+        <ul>
+          {{#each part1_list}}
+            <li>{{list1}}</li>
+            <li>{{list2}}</li>
+            <li>{{list3}}</li>
+          {{/each}}
+        </ul>
+        <p>{{part1_p2}}</p>
+      </section>
+
+      <!-- PART 2 -->
+      <section>
+        <h2 id="part2" class="section-title">{{part2_title}}</h2>
+        <div class="text-with-image">
+          <p>{{part2_p1}}</p>
+          <img src="{{part2_img}}" alt="{{part2_img_alt}}" class="img-medium" />
+        </div>
+        <ul>
+          {{#each part2_list}}
+            <li>{{list1}}</li>
+            <li>{{list2}}</li>
+          {{/each}}
+        </ul>
+        <p>{{part2_p2}}</p>
+      </section>
+
+      <!-- PART 3 -->
+      <section>
+        <h2 id="part3" class="section-title">{{part3_title}}</h2>
+        <p>{{part3_p1}}</p>
+        <p>{{part3_p2}}</p>
+        <p>{{part3_p3}}</p>
+        <p>{{part3_p4}}</p>
+        <div class="Graph">
+          <img src="{{part3_img}}" alt="{{part3_img_alt}}" class="img-large" />
+        </div>
+      </section>
+
+      <!-- PART 4 : Tableau -->
+      <section>
+        <h2 id="part4" class="section-title">{{part4_title}}</h2>
+        <div class="table-wrapper" id="content">
+          <table class="kpis">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>High speed access</th>
+                <th>Other very high speed access</th>
+                <th>Fiber FTTH access</th>
+                <th>Total access</th>
+                <th>Observation</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each item}}
+                <tr>
+                  <td>{{year}}</td>
+                  <!-- classes de couleur facultatives : ton script peut les ajouter après rendu -->
+                  <td class="{{color_high_speed}}">{{high_speed}} M</td>
+                  <td class="{{color_very_high_speed}}">{{very_high_speed}} M</td>
+                  <td class="{{color_fibre_ftth}}">{{fibre_ftth}} M</td>
+                  <td>{{total}} M</td>
+                  <td>{{comment}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>&copy; 2025 - Net Evolution</p>
+</footer>
+
+
+
+
+

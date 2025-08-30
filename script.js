@@ -1,31 +1,39 @@
 /*const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");*/
+function bindNav() {
+  const navButton = document.getElementById("hamburgerMenu");
+  const navMenu = document.getElementById("primaryNav");
+  if (!navButton || !navMenu) return;
 
-const navButton = document.getElementById("hamburgerMenu");
-const navMenu = document.getElementById("primaryNav");
 
-function openNavigation() {
-  navButton.setAttribute("aria-expanded", "true");
-  navMenu.hidden = false;
-  navButton.classList.toggle("active");
-  navMenu.classList.toggle("active");
-}
+  // ⚠️ ChatGPT AJOUT évite les doubles listeners si bindNav() est rappelé
+  if (navButton.dataset.bound === "1") return;
+  navButton.dataset.bound = "1";
 
-function closeNavigation() {
-  navButton.setAttribute("aria-expanded", "false");
-  navMenu.hidden = true;
-  navButton.classList.remove("active");
-  navMenu.classList.remove("active");
-}
-
-navButton.addEventListener("click", () => {
-  const expanded = navButton.getAttribute("aria-expanded") === "true";
-  if (expanded) {
-    closeNavigation();
-  } else {
-    openNavigation();
+  function openNavigation() {
+    navButton.setAttribute("aria-expanded", "true");
+    navMenu.hidden = false;
+    navButton.classList.toggle("active");
+    navMenu.classList.toggle("active");
   }
-})
+
+  function closeNavigation() {
+    navButton.setAttribute("aria-expanded", "false");
+    navMenu.hidden = true;
+    navButton.classList.remove("active");
+    navMenu.classList.remove("active");
+  }
+
+
+  navButton.addEventListener("click", () => {
+    const expanded = navButton.getAttribute("aria-expanded") === "true";
+    if (expanded) {
+      closeNavigation();
+    } else {
+      openNavigation();
+    }
+  })
+}
 /*hamburger.addEventListener("click",()=>{
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
@@ -102,11 +110,11 @@ if (contentTag) {
 
   Promise.all([
     tEngine.loadTemplate(),
-    fetch('data.json').then(res => res.json())
+    fetch('Page3.json').then(res => res.json())
   ])
   .then(([_, data])=>{
-    console.log("template + data loaded")
     tEngine.renderTemplate("content",data); // injecte le template brut dans le DOM
+    bindNav()
   })
 
 }
@@ -126,6 +134,7 @@ if (contentTag) {
 // }
 
 document.addEventListener("DOMContentLoaded", () => {
+  bindNav()
   fetchPeriods();
 });
 

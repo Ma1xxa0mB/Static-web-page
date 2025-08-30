@@ -13,8 +13,8 @@ header {
     align-items: center;
     justify-content: flex-start;
     background-color:  rgb(112, 78, 238);
-    min-height: 100px; /* responsive */
-    padding: 0 20px;
+    min-height: 6.25rem; /* responsive */
+    padding: 0 1.25rem;
 }
 
 
@@ -24,17 +24,17 @@ header {
 .hamburger {
     display: none;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 1.25rem;
     border-style: none;
     background-color: white;
-    padding: 15px;
+    padding: 1rem;
 }
 
 .bar {
     display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
+    width: 1.5rem;
+    height: 0.2rem;
+    margin: 0.3rem auto;
     -webkit-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
     background-color: rgb(112, 78, 238);
@@ -52,8 +52,9 @@ header {
 /* Left Navbar */
 
 
+
 .nav-menu {
-    flex: 0 0 260px; /* ne grandit pas, ne rétrécit pas, base = 260px */
+    flex: 0 0 16rem; /* No changes with base 16rem */
     background-color: rgb(239, 236, 252);
 }
 
@@ -69,13 +70,13 @@ header {
     color: rgb(112, 78, 238);
     display:flex;
     align-items:center;
-    padding: 0px 10px 0px 30px;
-    min-height: 110px; 
+    padding: 0 0.6rem 0 1.875rem ;
+    min-height: 6.875rem; 
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
-    font-family: 'GC Kualine', sans-serif;
-    border-bottom: 1px solid rgba(112, 78, 238, 0.2);
+    font-size: 1rem;
+    font-family: 'Montserrat-B','', sans-serif;
+    border-bottom: 0.06rem solid rgba(112, 78, 238, 0.2);
 }
 
 
@@ -89,7 +90,7 @@ main {
 .banner {
     background-size: cover;
     background-position: center;
-    min-height: 500px;
+    min-height: 31rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -114,19 +115,19 @@ main {
 .summary {
     color: rgb(112, 78, 238);
     background-color: rgb(239, 236, 252);
-    max-width: 800px;
-    margin-top: 65px; 
-    padding: 20px;
+    max-width: 50rem;
+    margin-top: 4rem; 
+    padding: 1.25rem;
 }
 
 .summary a {
     display: block;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     color: rgb(112, 78, 238);
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
-    font-family: 'GC Kualine', sans-serif;
+    font-size: 1rem;
+    font-family: 'Montserrat-B','GC Kualine', sans-serif;
 
 }
 
@@ -135,17 +136,17 @@ main {
 
 
 .Content {
-    padding-left: 100px;
-    padding-right: 50px;
-    max-width: 900px;
+    padding-left: 6rem;
+    padding-right: 3rem;
+    max-width: 56rem;
     width: 100%;
     background-color: white;
     color: #4d4d4d;
 }
 
 p, ul {
-    margin-bottom: 30px;
-    font-size: 18px;
+    margin-bottom: 1.875rem;
+    font-size: 1.125rem;
     line-height: 1.8
 }
 
@@ -159,7 +160,7 @@ img {
 
 .img-medium {
     width: 100%;
-    min-width: 300px;
+    min-width: 18.75rem;
 }
 
 .img-large {
@@ -167,26 +168,30 @@ img {
 }
 
 .img-logo {
-    max-width: 150px;
+    max-width: 7rem;
 }
 
 /* List from the content */
 .Content li {
-    margin-left: 40px; /* fixing bullet points being to left */
+    margin-left: 2.5rem; /* fixing bullet points being to left */
 }
 
 /* Text with image on the right */
 .text-with-image {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 /* for text + image on same line we need the same margin so we reset the margin for the text because otherwise it is double margin*/
 .text-with-image p {
-    margin-bottom: 0px;    
+    margin-bottom: 0;    
 }
 
 .text-with-image img {
-    margin-left: 20px;   
+    margin-left: 1.25rem;   
+}
+
+.adsl-cable-img {
+        flex-direction: column;
 }
 
 /* Table */
@@ -194,12 +199,13 @@ table {
     border-collapse: collapse;
     width: 100%;
     text-align: center; 
-    border: 2px solid black;
+    border: 0.125rem solid black;
+    margin-bottom: 4rem;
 }
 
 th, td {
-    border: 1px solid #ccc;
-    padding: 20px;
+    border: 0.0625rem solid #ccc;
+    padding: 1.25rem;
 }
 
 th {
@@ -235,8 +241,8 @@ footer {
     justify-content: center;
     background-color: rgb(112, 78, 238);
     color: white;
-    font-size: 14px;
-    min-height: 200px;
+    font-size: 0.875rem;
+    min-height: 12.5rem;
          
 }
 
@@ -253,31 +259,33 @@ footer p {
 }
 
 .site-title {
-    font-size: 20px;
-    color: rgb(239, 236, 252);;
-    margin: 0 50px;
+    font-size: 1.25rem;
+    color: rgb(239, 236, 252);
+    margin: 0 3.125rem;
+    font-family: 'Orbitron'
 }
 
 h1 {
-    font-size: 65px;
+    font-size: 3.5rem;
     font-weight: bold;
     color: white;
-    margin:0px 100px; /* specialement pour le long titre du homepage*/
-    font-family: 'Rosiana' ;
+    margin:0 6rem; /* specialement pour le long titre du homepage*/
+    font-family: 'Orbitron';
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Effect for clear title*/
 }
 
 .summary-title {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: rgb(112, 78, 238);
-    margin: 0 20px;
-    margin-bottom: 10px;
+    margin: 0 1.25rem;
+    margin-bottom: 0.625rem;
 }
 
 .section-title {
-    font-size: 23px;
+    font-size: 1.4rem;
     color: #011e2a;
-    margin-bottom: 35px;
-    margin-top: 65px; 
+    margin-bottom: 2.2rem;
+    margin-top: 4rem; 
 }
 
 
@@ -289,21 +297,31 @@ h1 {
 
     /* Header */
 
+    /* reduce logo and title sizes so everything enters in the header*/
+    .img-logo {
+        max-width: 6rem; 
+    }
+
+    .site-title {
+    font-size: 0.9rem;
+    margin: 0 1.5rem;
+    }
+
     /* Hamburger menu and Nav menu */
     .hamburger{
         display: block;
         margin-left: auto;   /* le pousse à droite */
-        margin-right: 20px;  /* espace avec le bord */
+        margin-right: 1rem;  /* espace avec le bord */
     }
     /*Transform the hamburger menu into a cross */ 
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
     }
     .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(0.5rem) rotate(45deg);
     }
     .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-0.5rem) rotate(-45deg);
     }
     /* 1. Empiler les éléments  et fais disparaitre naturellement le navbar de gauche*/
     .nav-and-main {
@@ -326,28 +344,37 @@ h1 {
     .nav-menu[hidden] { display: none; }
 
 
+    /* Main content with banner */
+   
+    h1 {
+    font-size: 3rem;
+    margin:0 3rem;
+    }
+
     /* Main content without banner */
 
 
     .Content {
-        padding: 0 40px;
+        padding: 0 2.5rem;
         display: flex;
         flex-direction: column ;
     }
+
     table {
     display: block;     /* devient scrollable */
     overflow-x: auto;
     white-space: nowrap; /* garde les colonnes côte à côte */
-    }
+    } 
+
     /* Text with image */
     .text-with-image {
         flex-direction: column;
         align-items: center;
     }
     .text-with-image img {
-        margin-left: 0px;
-        margin-top: 10px; 
-        max-width: 350px;
+        margin-left: 0;
+        margin-top: 0.625rem; 
+        max-width: 22rem;
         height: auto;   
     }
     .text-with-image p, .text-with-image li {
@@ -356,14 +383,22 @@ h1 {
 }
 
 
-/* Special rectification for adsl cable image */
+/* Special rectification for text and image */
 
-@media(max-width:1300px){
+@media(max-width:1100px){
     
-    .adsl-cable-img {
+    .text-with-image {
         flex-direction: column;
+        align-items: center; 
     }
-}
+
+    .img-medium {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    margin-top: 1rem; 
+    }
+} 
 
 
 /* font-family */
@@ -393,6 +428,20 @@ h1 {
 @font-face {
   font-family: 'Rosiana';
   src: url('./fonts/Rosiana.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('./fonts/Oswald-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('./fonts/orbitron-medium.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

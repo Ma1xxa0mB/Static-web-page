@@ -1,0 +1,118 @@
+{
+    "site_title": "The internet evolution in France",
+    "page3_title": "THE ARRIVAL OF FIBER (2010-2025)",
+    "banner_Class": "banner-fiber",
+    "logo_img": "Images/Logo.png",
+    "logo_alt": "Logo Net Evolution",
+    "nav": [
+        {
+            "href": "index.html",
+            "page": "Homepage"
+        },
+        {
+            "href": "Page2.html",
+            "page": "The Age of ADSL Broadband (2000-2010)"
+        },
+        {
+            "href": "Page3.html",
+            "page": "The Arrival of Fiber (2010-2025)"
+        }
+    ],
+    "summary": [
+        {
+            "id": "part1",
+            "sub_title": "The Arrival of Fiber (2007–2009)"
+        },
+        {
+            "id": "part2",
+            "sub_title": "France Très Haut Débit Plan (2013)"
+        },
+        {
+            "id": "part3",
+            "sub_title": "Progress report in 2025"
+        },
+        {
+            "id": "part4",
+            "sub_title": "Evolution of Broadband Subscriptions (2005–2024)"
+        }
+    ],
+
+    "part1_title": "The Arrival of Fiber (2007–2009)",
+    "part1_p1": "In 2007, France began equipping its network with fibre optics. Unlike ADSL, which uses copper lines, fibre optics use glass or plastic cables to transmit data in the form of light, which allows for:  ",
+    "part1_img": "Images/Page3Photo1.jpg",
+    "part1_img_alt": "Fiber cable",
+    "part1_list": [ 
+        {
+            "list1": "Much faster transfer speeds, around 200 Mb/s, far higher than ADSL.",
+            "list2": "Virtually no loss of speed due to distance.",
+            "list3": "Enhanced connection stability, less prone to environmental interference."
+        }   
+    ],
+    "part1_p2": "When it first arrived, fibre optics were mainly deployed in the most urbanised areas, where deployment costs were lower.",
+    
+
+    "part2_title": "France Très Haut Débit Plan (2013)",
+    "part2_p1": "In 2013, the France Très Haut Débit Plan was launched. It aims to build a fibre optic network connecting subscribers throughout France by the end of 2022. This initiative has two objectives:",
+    "part2_img": "Images/Page3Photo2.jpg",
+    "part2_img_alt": "France Very High Speed Plan",
+    "part2_list": [ 
+        {
+            "list1":"To reduce the digital divide between regions",
+            "list2":"Guarantee very high-speed internet access (above 30 Mb/s) for all citizens, whether they live in urban or rural areas."
+        }
+    ],
+    "part2_p2": "This new fibre optic network is intended to gradually replace the existing copper network (RTC/ADSL) and become the only fixed-line internet access network covering the whole of France.",
+    
+
+    "part3_title": "Progress report in 2025",
+    "part3_p1": "What is the situation today? Is the plan proceeding as expected?",
+    "part3_p2": "By the end of 2023, 84% of the rollout will have been completed, whereas the initial target was full coverage by 2022. ARCEP has fined Orange for the delay in covering less densely populated areas.",
+    "part3_p3": "Given the slowdown in deployment, it is now estimated that the target of full coverage by 2025 will not be met.",
+    "part3_p4": "Nevertheless, fibre continues to become more widespread: in January 2025, 39.9 million premises will be eligible, representing 91% of French territory, according to ARCEP. Estimates indicate that this percentage could reach 100% by the end of 2025, but this seems uncertain: 4.6 million premises remain to be connected, many of which are in complex or low-density areas.",
+    "part3_img": "Images/Page3Photo3.png",
+    "part3_img_alt": "Evolution graph",
+
+    "part4_title": "Evolution of Broadband Subscriptions (2005–2024)",
+    "item": [
+        {
+            "year": 2005,
+            "high_speed": 9.5,
+            "very_high_speed": 0,
+            "fibre_ftth": 0,
+            "total": 9.5,
+            "comment": "Start of broadband in France"
+        },
+        {
+            "year": 2009,
+            "high_speed": 20.2,
+            "very_high_speed": 0.2,
+            "fibre_ftth": 0.1,
+            "total": 20.5,
+            "comment": "First fibre optic subscribers"
+        },
+        {
+            "year": 2014,
+            "high_speed": 22.7,
+            "very_high_speed": 2.8,
+            "fibre_ftth": 1.4,
+            "total": 26.9,
+            "comment": "Peak of ADSL subscriptions"
+        },
+        {
+            "year": 2021,
+            "high_speed": 4.0,
+            "very_high_speed": 3.2,
+            "fibre_ftth": 15.6,
+            "total": 22.8,
+            "comment": "Fibre surpasses traditional broadband"
+        },
+        {
+            "year": 2024,
+            "high_speed": 2.3,
+            "very_high_speed": 1.9,
+            "fibre_ftth": 24.4,
+            "total": 32.6,
+            "comment": "Strong growth of ultra-fast broadband access"
+        }
+    ]
+}
