@@ -75,7 +75,7 @@ header {
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
-    font-family: 'Montserrat-B','', sans-serif;
+    font-family: 'Montserrat-B', sans-serif;
     border-bottom: 0.06rem solid rgba(112, 78, 238, 0.2);
 }
 
@@ -383,7 +383,7 @@ h1 {
 }
 
 
-/* Special rectification for text and image */
+/* Special rectification for text with image */
 
 @media(max-width:1100px){
     
@@ -403,14 +403,6 @@ h1 {
 
 /* font-family */
 
-
-@font-face {
-  font-family: 'GC Kualine';
-  src: url('./fonts/GC-Kualine-Demo-BF688b24f63a0c2.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @font-face {
   font-family: 'Montserrat-M';
   src: url('./fonts/Montserrat-Medium.ttf') format('truetype');
@@ -421,13 +413,6 @@ h1 {
 @font-face {
   font-family: 'Montserrat-B';
   src: url('./fonts/Montserrat-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Rosiana';
-  src: url('./fonts/Rosiana.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
